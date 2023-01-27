@@ -170,9 +170,11 @@ function App() {
           </>
         )}
         <div>
-          <p>{`${time.minutes.toString().padStart(2, "0")}:${time.seconds
-            .toString()
-            .padStart(2, "0")}`}</p>
+          {handleFinish() ? null : (
+            <p>{`${time.minutes.toString().padStart(2, "0")}:${time.seconds
+              .toString()
+              .padStart(2, "0")}`}</p>
+          )}
         </div>
 
         <div className="flex gap-10 flex-col justify-center mt-12 md:w-full items-center ">
